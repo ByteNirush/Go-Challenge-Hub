@@ -1,0 +1,12 @@
+1.  Topic: Functions, Structs, and Basic Types
+    Question:
+        Create a Go program that defines a Book struct with fields Title, Author, and Pages. Write a function PrintBookDetails that accepts a Book and prints its information.
+
+    Bonus: Create a slice of 3 books and loop through to print each one.
+
+2.  Topic: Interfaces and Methods
+    Question:
+        Define an interface Shape with a method Area() float64. Create two structs: Circle (with Radius) and Rectangle (with Width, Height) that implement Shape. Write a function PrintArea that accepts a Shape and prints its area.
+
+    Bonus: Store a mix of shapes in a slice and print the area of each.
+
