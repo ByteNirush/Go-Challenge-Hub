@@ -1,0 +1,21 @@
+1. FizzBuzz
+Write a Go program that prints the numbers from 1 to 30. But for multiples of 3, print "Fizz" instead of the number, 
+and for multiples of 5, print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
+
+
+2. Sum of Even and Odd Numbers
+Write a Go program that takes an integer input n from the user and:
+Calculates the sum of all even numbers from 1 to n.
+Calculates the sum of all odd numbers from 1 to n.
+Prints both sums.
+
+
+3. Prime Number Checker
+Write a Go program that:
+Accepts a number from the user.
+Checks whether the number is a prime number or not.
+Prints whether the number is prime or not prime.
+
+
+
+
