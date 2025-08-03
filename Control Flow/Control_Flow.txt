@@ -1,0 +1,4 @@
+Control flow is fundamental to programming, allowing us to dictate the order in which code is executed based on conditions and iterations. Without control flow statements, programs would execute sequentially, line by line, offering limited flexibility. This lesson explores the core control flow mechanisms in Go: if/else statements for conditional execution, for loops for repetitive tasks, and switch cases for multi-way branching. Mastering these constructs is essential for building complex and dynamic applications.
+
+If/Else Statements:
+if/else statements enable conditional execution of code blocks. The if statement evaluates a boolean expression, and if the expression is true, the code block within the if statement is executed. Optionally, an else block can be provided, which is executed if the if condition is false. Go also supports else if for chaining multiple conditions.
