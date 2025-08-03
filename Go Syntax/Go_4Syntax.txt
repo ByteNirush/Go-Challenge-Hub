@@ -60,3 +60,55 @@ Reference Data Types
     2. Maps: A collection of key-value pairs.
     3. Channels: A mechanism for communication between goroutines (concurrent functions).
     4. Interfaces: A type that specifies a set of methods that a type must implement.
+
+Operators in Go
+Operators are symbols that perform operations on one or more operands. Go provides a variety of operators, including arithmetic, comparison, logical, bitwise, assignment, and others.
+
+Arithmetic Operators
+These operators perform arithmetic calculations.
+    +: Addition
+    -: Subtraction
+    *: Multiplication
+    /: Division
+    %: Modulus (remainder)
+
+
+Comparison Operators
+These operators compare two operands and return a boolean value.
+    ==: Equal to
+    !=: Not equal to
+    >: Greater than
+    <: Less than
+    >=: Greater than or equal to
+    <=: Less than or equal to
+
+Logical Operators
+These operators perform logical operations on boolean values.
+    &&: Logical AND (returns true if both operands are true)
+    ||: Logical OR (returns true if either operand is true)
+    !: Logical NOT (negates the operand)
+
+Bitwise Operators
+These operators perform operations on the individual bits of integers.
+    &: Bitwise AND
+    |: Bitwise OR
+    ^: Bitwise XOR (exclusive OR)
+    &^: Bit clear (AND NOT)
+    <<: Left shift
+    >>: Right shift
+
+
+Assignment Operators
+These operators assign a value to a variable.
+    =: Simple assignment
+    +=: Add and assign
+    -=: Subtract and assign
+    *=: Multiply and assign
+    /=: Divide and assign
+    %=: Modulus and assign
+    &=: Bitwise AND and assign
+    |=: Bitwise OR and assign
+    ^=: Bitwise XOR and assign
+    &^=: Bit clear and assign
+    <<=: Left shift and assign
+    >>=: Right shift and assign    
