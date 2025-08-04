@@ -2,3 +2,9 @@ Control flow is fundamental to programming, allowing us to dictate the order in 
 
 If/Else Statements:
 if/else statements enable conditional execution of code blocks. The if statement evaluates a boolean expression, and if the expression is true, the code block within the if statement is executed. Optionally, an else block can be provided, which is executed if the if condition is false. Go also supports else if for chaining multiple conditions.
+
+Loops
+Loops are used to execute a block of code repeatedly. Go provides only one looping construct, the for loop, but it's versatile and can be used in several ways.
+
+Switch Cases
+The switch statement is a multi-way branch statement that provides an efficient way to transfer execution to different parts of code based on the value of an expression.
