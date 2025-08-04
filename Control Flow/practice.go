@@ -6,6 +6,7 @@
 // Below 60:
 
 package main
+
 import (
 	"fmt"
 )
@@ -23,4 +24,15 @@ func main() {
 	} else {
 		fmt.Println("Grade: F")
 	}
+}
+
+// Calculating the Sum of Numbers
+
+func main() {
+	numbers := []int{10, 20, 30, 40, 50}
+	sum := 0
+	for _, number := range numbers {
+		sum += number
+	}
+	fmt.Println("sum:", sum)
 }
