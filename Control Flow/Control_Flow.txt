@@ -8,3 +8,14 @@ Loops are used to execute a block of code repeatedly. Go provides only one loopi
 
 Switch Cases
 The switch statement is a multi-way branch statement that provides an efficient way to transfer execution to different parts of code based on the value of an expression.
+
+
+No break Statement Needed
+Unlike some other languages, Go does not require a break statement at the end of each case. Execution automatically stops after the matching case is executed. To achieve fallthrough behavior, use the fallthrough keyword.
+
+fallthrough Keyword
+The fallthrough keyword forces execution to continue to the next case, regardless of whether the next case matches the expression.
+
+Short Variable Declaration in switch Statements
+Similar to if statements, you can declare a variable within the switch statement. The scope of this variable is limited to the switch block.
+
