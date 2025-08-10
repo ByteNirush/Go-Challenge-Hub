@@ -1,0 +1,17 @@
+Maps: Key-Value Pairs in Go
+Maps are a fundamental data structure in Go, providing a way to store and retrieve data using key-value pairs. They are similar to dictionaries or hash tables in other programming languages. Maps are incredibly versatile and are used extensively in Go for tasks such as data indexing, caching, and configuration management. Understanding how to effectively use maps is crucial for writing efficient and maintainable Go code. This lesson will cover the creation, manipulation, and usage of maps in Go, equipping you with the knowledge to leverage their power in your own projects.
+
+Understanding Maps in Go
+A map is a built-in data structure in Go that associates keys of a specific type with values of another type. The key type must be comparable (e.g., integers, strings, booleans, arrays if the element type is comparable, structs if all fields are comparable), while the value type can be anything, including other maps or slices. Maps provide fast lookups, insertions, and deletions, making them ideal for scenarios where you need to quickly access data based on a unique identifier.
+
+Maps are Unordered
+As mentioned earlier, maps in Go are inherently unordered. This means that the order in which you insert elements into a map is not preserved when you iterate over it. If you need to maintain the order of elements, consider using a slice of structs or a combination of a map and a slice.
+
+Map Use Cases
+Maps are useful in a variety of scenarios:
+
+    1. Data Indexing: Creating an index to quickly look up data based on a unique identifier. For example, mapping user IDs to user objects.
+    2. Caching: Storing frequently accessed data in memory for faster retrieval.
+    3. Configuration Management: Storing configuration settings as key-value pairs.
+    4. Counting Occurrences: Counting the number of times each element appears in a collection.
+    5. Grouping Data: Grouping data based on a common attribute.
