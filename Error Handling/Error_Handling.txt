@@ -1,0 +1,36 @@
+Error handling is a crucial aspect of writing robust and reliable Go programs. Unlike some languages that rely heavily on exceptions, Go uses a more explicit approach, requiring developers to actively check for and handle errors. This approach, while sometimes more verbose, leads to clearer and more maintainable code by forcing developers to consider potential failure scenarios. This lesson will delve into the best practices and techniques for error handling in Go, equipping you with the knowledge to write resilient applications.
+
+Understanding Errors in Go
+In Go, an error is a built-in interface type. It's defined as follows:
+
+        type error interface {
+            Error() string
+        }
+
+Any type that implements the Error() string method satisfies the error interface. This method provides a human-readable string representation of the error.
+
+Error Values
+    Functions in Go often return an error as the last return value. By convention, if a function is successful, it returns nil as the error value. If an error occurs, the function returns a non-nil error value, providing information about the failure.
+
+            func divide(a, b float64) (float64, error) {
+                if b == 0 {
+                    return 0, errors.New("division by zero")
+                }
+                return a / b, nil
+            }
+    In this example, the divide function returns a float64 and an error. If b is zero, it returns an error created using errors.New. Otherwise, it returns the result of the division and nil.
+
+
+
+Pros of Sentinel Errors:
+    Simple to use and understand.
+    Fast comparison using ==.
+Cons of Sentinel Errors:
+    Tight coupling: The caller is tightly coupled to the specific error value. Changing the error message in the package can break the caller's code.
+    Limited context: Sentinel errors provide limited context about the error.
+
+
+
+Error Wrapping:
+    Error wrapping involves wrapping an existing error with additional context. This allows you to preserve the original error while adding more information about where the error occurred. Go 1.13 introduced built-in support for error wrapping using the %w verb in fmt.Errorf.
+
