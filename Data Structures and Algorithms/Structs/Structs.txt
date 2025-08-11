@@ -16,3 +16,67 @@ StructName: The name of the struct (should be UpperCamelCase).
 struct: Keyword indicating that you are defining a struct type.
 FieldName: The name of a field within the struct (should be camelCase).
 FieldType: The data type of the field (e.g., int, string, bool, or another struct).
+
+
+Nested Structs
+    Structs can contain other structs as fields, allowing you to create more complex and hierarchical data structures. This is known as struct embedding or composition.
+
+Embedding Structs
+    When you embed a struct within another struct, the fields of the embedded struct become accessible directly from the outer struct.
+
+Promoting Fields
+    Go allows you to "promote" fields from an embedded struct to the outer struct's level. This means you can access the embedded struct's fields directly from the outer struct without explicitly specifying the embedded struct's name.
+
+Shadowing
+    If a field in the outer struct has the same name as a promoted field from an embedded struct, the outer struct's field takes precedence. This is known as shadowing.
+
+Struct Methods
+    In Go, you can define methods on structs. A method is a function that is associated with a specific type. Struct methods allow you to add behavior to your custom data types.
+
+Defining Methods
+    The syntax for defining a method on a struct is as follows:
+        func (receiver TypeName) MethodName(parameters) returnType {
+            // Method body
+        }
+    receiver: Specifies the type that the method is associated with. It's written as (variable TypeName). The receiver can be a struct or any other named type.
+    TypeName: The name of the type (e.g., a struct name).
+    MethodName: The name of the method (should be UpperCamelCase).
+    parameters: The input parameters of the method (if any).
+    returnType: The return type of the method (if any).
+
+Value Receivers vs. Pointer Receivers
+    When defining a method, you can choose between a value receiver and a pointer receiver.
+
+        Value Receiver: The method operates on a copy of the struct value. Any modifications made to the struct within the method are not reflected in the original struct.
+        Pointer Receiver: The method operates on a pointer to the struct value. Any modifications made to the struct within the method are reflected in the original struct.
+
+When to use Value Receivers:
+    When the method doesn't need to modify the struct's state.
+    When you want to operate on a copy of the struct to avoid unintended side effects.
+    When the struct is small and copying it is inexpensive.
+
+When to use Pointer Receivers:
+    When the method needs to modify the struct's state.
+    When the struct is large and copying it would be inefficient.
+    When the method needs to handle nil values of the struct.
+
+
+Struct Tags
+Struct tags are metadata annotations that can be added to struct fields. They provide a way to associate additional information with each field, which can be used by reflection or other tools.
+
+Syntax
+Struct tags are written as strings enclosed in backticks (``) after the field type.
+    type MyStruct struct {
+        FieldName FieldType `tag1:"value1" tag2:"value2"`
+    }
+
+    FieldName: The name of the struct field.
+    FieldType: The data type of the field.
+    `tag1:"value1" tag2:"value2"`: The struct tag, consisting of one or more key-value pairs.
+
+Common Uses
+Struct tags are commonly used for:
+    JSON serialization/deserialization: Specifying how struct fields should be mapped to JSON keys.
+    Database mapping: Defining how struct fields should be mapped to database columns.
+    Validation: Specifying validation rules for struct fields.
+    ORM (Object-Relational Mapping): Defining relationships between structs and database tables.
