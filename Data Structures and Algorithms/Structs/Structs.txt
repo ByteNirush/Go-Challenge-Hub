@@ -1,0 +1,18 @@
+Structs are fundamental building blocks in Go, allowing you to create custom data types that represent real-world entities or complex data structures. They provide a way to group related data fields together under a single name, enhancing code organization and readability. Understanding structs is crucial for building robust and maintainable Go applications. This lesson will delve into the intricacies of defining, using, and composing structs, equipping you with the knowledge to effectively leverage them in your projects.
+
+Defining Structs
+A struct is a user-defined type that represents a collection of fields. These fields can be of different data types, allowing you to create complex data structures.
+
+Basic Struct Definition
+The basic syntax for defining a struct in Go is as follows:
+    type StructName struct {
+        FieldName1 FieldType1
+        FieldName2 FieldType2
+        // ... more fields
+    }
+
+type: Keyword used to define a new type.
+StructName: The name of the struct (should be UpperCamelCase).
+struct: Keyword indicating that you are defining a struct type.
+FieldName: The name of a field within the struct (should be camelCase).
+FieldType: The data type of the field (e.g., int, string, bool, or another struct).
