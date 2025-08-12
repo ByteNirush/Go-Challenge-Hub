@@ -19,15 +19,10 @@ There are several types of linked lists, each with its own characteristics and u
 Implementing a Singly Linked List in Go
     Let's start by implementing a singly linked list in Go. We'll define the Node and LinkedList structs, and then implement methods for common operations like insertion, deletion, and traversal.
 
+Implementing a Doubly Linked List in Go
+    A doubly linked list is similar to a singly linked list, but each node also has a pointer to the previous node. This allows for bidirectional traversal.
 
-Implementing Insertion
-    We'll implement two insertion methods: InsertAtBeginning and InsertAtEnd.
 
-Implementing Deletion
-    We'll implement a DeleteWithValue method to delete a node with a specific value.
-
-Implementing Traversal
-    We'll implement a Display method to print the elements of the linked list.
 
 
 

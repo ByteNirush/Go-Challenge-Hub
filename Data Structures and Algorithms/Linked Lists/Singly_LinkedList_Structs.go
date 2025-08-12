@@ -20,6 +20,8 @@ func (ll *LinkedList) InsertAtBeginning(date int) {
 	newNode := &Node{Date: date, Next: ll.Head}
 	ll.Head = newNode
 }
+// This method creates a new node with the given data, sets its Next pointer to the current head of the list, and then updates the list's Head to point to the new node.
+
 
 // InsertAtEnd inserts a new node at the end of the list
 func (ll *LinkedList) InsertAtEnd(date int) {
@@ -37,6 +39,7 @@ func (ll *LinkedList) InsertAtEnd(date int) {
 
 	current.Next = newNode
 }
+// This method creates a new node with the given data and a nil Next pointer. If the list is empty, it sets the Head to the new node. Otherwise, it traverses the list to find the last node and sets its Next pointer to the new node.
 
 
 // DeleteWithValue deletes the first node with the give value
@@ -59,6 +62,7 @@ func (ll *LinkedList) DeleteWithValue(date int) {
 		current = current.Next
 	}
 }
+// This method first checks if the list is empty. If not, it checks if the head node contains the value to be deleted. If so, it updates the Head to point to the next node. Otherwise, it traverses the list to find the node to be deleted and updates the Next pointer of the previous node to skip the node to be deleted.
 
 // Display prints the elements of the linked list
 func (ll *LinkedList) Display() {
@@ -69,6 +73,7 @@ func (ll *LinkedList) Display() {
 	}
 	fmt.Println("nil")
 }
+// This method traverses the list from the Head to the end, printing the data of each node.
 
 func main() {
 	ll := LinkedList{}

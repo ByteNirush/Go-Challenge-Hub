@@ -27,6 +27,8 @@ func (dll *DoublyLinkedList) InsertAtBeginning(data int) {
 		dll.Head = newNode
 	}
 }
+// This method creates a new node, sets its Next pointer to the current head, and its Prev pointer to nil. If the list is empty, it sets both Head and Tail to the new node. Otherwise, it updates the Prev pointer of the current head to point to the new node and updates the Head to point to the new node.
+
 
 // InsertAtEnd inserts a new node at the end of the list
 func (dll *DoublyLinkedList) InsertAtEnd(data int) {
@@ -40,6 +42,7 @@ func (dll *DoublyLinkedList) InsertAtEnd(data int) {
 		dll.Tail = newNode
 	}
 }
+// This method creates a new node, sets its Next pointer to nil, and its Prev pointer to the current tail. If the list is empty, it sets both Head and Tail to the new node. Otherwise, it updates the Next pointer of the current tail to point to the new node and updates the Tail to point to the new node. This is more efficient than traversing the list to find the end, as we maintain a Tail pointer.
 
 
 // DeleteWithValue deletes the first node with the given value
@@ -64,6 +67,8 @@ func (dll *DoublyLinkedList) DeleteWithValue(data int) {
 		current = current.Next
 	}
 }
+// This method traverses the list to find the node to be deleted. If the node is found, it updates the Next pointer of the previous node and the Prev pointer of the next node to bypass the node to be deleted. It also handles the cases where the head or tail is being deleted, updating the Head or Tail pointers accordingly.
+
 
 // Display prints the elements of the doubly linked list
 func (dll *DoublyLinkedList) Display() {
@@ -83,6 +88,8 @@ func (dll *DoublyLinkedList) Display() {
 	}
 	fmt.Println("nil")
 }
+// This method traverses the list from the Head to the end, printing the data of each node. Then, it traverses the list from the Tail to the beginning, printing the data of each node in reverse order.
+
 
 func main() {
 	dll := DoublyLinkedList{}
